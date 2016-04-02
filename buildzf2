@@ -8,6 +8,11 @@ NOW=$(date +"%d-%m-%Y")
 echo "Current Date : $NOW"
 echo "Applying Build Settings"
 
+#set this here, we don't want to disturb other things.
+export ARCH=x86_64
+export CCOMPILE=$CROSS_COMPILE
+export CROSS_COMPILE=x86_64-linux-
+
 #CONFIGS
 export SLEEP=1
 echo "Setting CPU Cores/Threads"
